@@ -1,0 +1,8 @@
+import module
+int main(int argc, string argv)
+{
+    string a1=2.3;
+    string a2 = "Hello" + "\"World\"";
+    print(a1,a2);
+    return 5.5;
+}

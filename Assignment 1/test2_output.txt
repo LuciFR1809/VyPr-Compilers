@@ -1,0 +1,60 @@
+Line: 3, Token: keyword, Lexeme: int
+Line: 3, Token: identifier, Lexeme: main
+Line: 3, Token: delimiter, Lexeme: (
+Line: 3, Token: delimiter, Lexeme: )
+Line: 3, Token: delimiter, Lexeme: {
+Line: 4, Token: operator, Lexeme: +
+Line: 4, Token: integer literal, Lexeme: 20
+Line: 5, Token: integer literal, Lexeme: 123
+Line: 5, Token: identifier, Lexeme: abc
+Line: 6, Token: keyword, Lexeme: string
+Line: 6, Token: string literal, Lexeme: "hello $ world"
+Line: 6, Token: delimiter, Lexeme: ;
+Line: 7, Token: identifier, Lexeme: a
+Line: 7, Token: operator, Lexeme: =
+Line: 7, Token: integer literal, Lexeme: +20
+Line: 8, Token: identifier, Lexeme: y
+Line: 8, Token: operator, Lexeme: =
+Line: 8, Token: identifier, Lexeme: char2a
+Line: 8, Token: operator, Lexeme: +
+Line: 8, Token: integer literal, Lexeme: 20
+Line: 9, Token: identifier, Lexeme: a
+Line: 9, Token: operator, Lexeme: +
+Line: 9, Token: integer literal, Lexeme: +20
+Line: 9, Token: operator, Lexeme: +
+Line: 9, Token: integer literal, Lexeme: 40
+Line: 10, Token: identifier, Lexeme: a
+Line: 10, Token: operator, Lexeme: +
+Line: 10, Token: operator, Lexeme: +=
+Line: 10, Token: integer literal, Lexeme: 20
+!!! Error in line 11 while parsing "
+Line: 11, Token: identifier, Lexeme: This
+Line: 11, Token: identifier, Lexeme: is
+Line: 11, Token: identifier, Lexeme: unclosed
+Line: 11, Token: keyword, Lexeme: string
+Line: 12, Token: keyword, Lexeme: int
+Line: 12, Token: identifier, Lexeme: y
+Line: 12, Token: operator, Lexeme: =
+Line: 12, Token: integer literal, Lexeme: +20
+Line: 12, Token: delimiter, Lexeme: ;
+Line: 13, Token: identifier, Lexeme: is
+Line: 13, Token: identifier, Lexeme: this
+Line: 13, Token: identifier, Lexeme: ture
+Line: 14, Token: identifier, Lexeme: floatx
+Line: 14, Token: operator, Lexeme: =
+Line: 14, Token: integer literal, Lexeme: 2
+Line: 14, Token: operator, Lexeme: /=
+Line: 14, Token: integer literal, Lexeme: 3
+Line: 14, Token: operator, Lexeme: +
+Line: 14, Token: integer literal, Lexeme: 5
+Line: 15, Token: keyword, Lexeme: float
+Line: 15, Token: operator, Lexeme: =
+Line: 15, Token: floating literal, Lexeme: -5.25
+!!! Error in line 15 while parsing .
+Line: 16, Token: keyword, Lexeme: return
+Line: 16, Token: keyword, Lexeme: true
+!!! Error in line 16 while parsing $
+Line: 16, Token: integer literal, Lexeme: 4
+Line: 17, Token: delimiter, Lexeme: \
+Line: 17, Token: string literal, Lexeme: "this is a\nother s\tring\""
+Line: 18, Token: delimiter, Lexeme: }

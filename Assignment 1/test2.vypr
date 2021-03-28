@@ -1,0 +1,18 @@
+#this is a comment
+
+int main(){
+	+20
+	123abc
+	string "hello $ world";
+	a = + 20
+	y = char2a+20
+	a++20+40
+	a++=20
+	"This is unclosed string
+	int y=+20; #another comment
+	is this ture
+	floatx = 2/=3+5#comment
+	float=-5.25.
+	return true$4
+	\"this is a\nother s\tring\""
+}

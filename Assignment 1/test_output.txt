@@ -1,0 +1,73 @@
+Line: 3, Token: keyword, Lexeme: int
+Line: 3, Token: identifier, Lexeme: fact
+Line: 3, Token: delimiter, Lexeme: (
+Line: 3, Token: keyword, Lexeme: int
+Line: 3, Token: identifier, Lexeme: n
+Line: 3, Token: delimiter, Lexeme: )
+Line: 3, Token: delimiter, Lexeme: {
+Line: 4, Token: keyword, Lexeme: if
+Line: 4, Token: delimiter, Lexeme: (
+Line: 4, Token: identifier, Lexeme: n
+Line: 4, Token: operator, Lexeme: <=
+Line: 4, Token: integer literal, Lexeme: 1
+Line: 4, Token: delimiter, Lexeme: )
+Line: 5, Token: keyword, Lexeme: return
+Line: 5, Token: integer literal, Lexeme: 1
+Line: 5, Token: delimiter, Lexeme: ;
+Line: 6, Token: keyword, Lexeme: else
+Line: 7, Token: keyword, Lexeme: return
+Line: 7, Token: identifier, Lexeme: n
+Line: 7, Token: operator, Lexeme: *
+Line: 7, Token: identifier, Lexeme: fact
+Line: 7, Token: delimiter, Lexeme: (
+Line: 7, Token: identifier, Lexeme: n
+Line: 7, Token: operator, Lexeme: -
+Line: 7, Token: integer literal, Lexeme: 1
+Line: 7, Token: delimiter, Lexeme: )
+Line: 7, Token: delimiter, Lexeme: ;
+Line: 8, Token: delimiter, Lexeme: }
+Line: 9, Token: keyword, Lexeme: void
+Line: 9, Token: identifier, Lexeme: main
+Line: 9, Token: delimiter, Lexeme: (
+Line: 9, Token: keyword, Lexeme: void
+Line: 9, Token: delimiter, Lexeme: )
+Line: 9, Token: delimiter, Lexeme: {
+Line: 10, Token: keyword, Lexeme: int
+Line: 10, Token: identifier, Lexeme: x
+Line: 10, Token: delimiter, Lexeme: ;
+Line: 11, Token: identifier, Lexeme: x
+Line: 11, Token: operator, Lexeme: =
+Line: 11, Token: integer literal, Lexeme: 1
+Line: 11, Token: delimiter, Lexeme: ;
+Line: 12, Token: keyword, Lexeme: while
+Line: 12, Token: delimiter, Lexeme: (
+Line: 12, Token: identifier, Lexeme: x
+Line: 12, Token: operator, Lexeme: <=
+Line: 12, Token: integer literal, Lexeme: 10
+Line: 12, Token: delimiter, Lexeme: )
+Line: 12, Token: delimiter, Lexeme: {
+Line: 13, Token: identifier, Lexeme: write
+Line: 13, Token: delimiter, Lexeme: (
+Line: 13, Token: identifier, Lexeme: x
+Line: 13, Token: delimiter, Lexeme: )
+Line: 13, Token: delimiter, Lexeme: ;
+Line: 14, Token: identifier, Lexeme: write
+Line: 14, Token: delimiter, Lexeme: (
+Line: 14, Token: identifier, Lexeme: fact
+Line: 14, Token: delimiter, Lexeme: (
+Line: 14, Token: identifier, Lexeme: x
+Line: 14, Token: delimiter, Lexeme: )
+Line: 14, Token: delimiter, Lexeme: )
+Line: 14, Token: delimiter, Lexeme: ;
+Line: 15, Token: identifier, Lexeme: writeln
+Line: 15, Token: delimiter, Lexeme: (
+Line: 15, Token: delimiter, Lexeme: )
+Line: 15, Token: delimiter, Lexeme: ;
+Line: 16, Token: identifier, Lexeme: x
+Line: 16, Token: operator, Lexeme: =
+Line: 16, Token: identifier, Lexeme: x
+Line: 16, Token: operator, Lexeme: +
+Line: 16, Token: integer literal, Lexeme: 1
+Line: 16, Token: delimiter, Lexeme: ;
+Line: 17, Token: delimiter, Lexeme: }
+Line: 18, Token: delimiter, Lexeme: }

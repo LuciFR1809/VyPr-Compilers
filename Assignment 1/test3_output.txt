@@ -1,0 +1,35 @@
+Line: 1, Token: keyword, Lexeme: import
+Line: 1, Token: identifier, Lexeme: module
+Line: 2, Token: keyword, Lexeme: int
+Line: 2, Token: identifier, Lexeme: main
+Line: 2, Token: delimiter, Lexeme: (
+Line: 2, Token: keyword, Lexeme: int
+Line: 2, Token: identifier, Lexeme: argc
+Line: 2, Token: delimiter, Lexeme: ,
+Line: 2, Token: keyword, Lexeme: string
+Line: 2, Token: identifier, Lexeme: argv
+Line: 2, Token: delimiter, Lexeme: )
+Line: 3, Token: delimiter, Lexeme: {
+Line: 4, Token: keyword, Lexeme: string
+Line: 4, Token: identifier, Lexeme: a1
+Line: 4, Token: operator, Lexeme: =
+Line: 4, Token: floating literal, Lexeme: 2.3
+Line: 4, Token: delimiter, Lexeme: ;
+Line: 5, Token: keyword, Lexeme: string
+Line: 5, Token: identifier, Lexeme: a2
+Line: 5, Token: operator, Lexeme: =
+Line: 5, Token: string literal, Lexeme: "Hello"
+Line: 5, Token: operator, Lexeme: +
+Line: 5, Token: string literal, Lexeme: "\"World\""
+Line: 5, Token: delimiter, Lexeme: ;
+Line: 6, Token: identifier, Lexeme: print
+Line: 6, Token: delimiter, Lexeme: (
+Line: 6, Token: identifier, Lexeme: a1
+Line: 6, Token: delimiter, Lexeme: ,
+Line: 6, Token: identifier, Lexeme: a2
+Line: 6, Token: delimiter, Lexeme: )
+Line: 6, Token: delimiter, Lexeme: ;
+Line: 7, Token: keyword, Lexeme: return
+Line: 7, Token: floating literal, Lexeme: 5.5
+Line: 7, Token: delimiter, Lexeme: ;
+Line: 8, Token: delimiter, Lexeme: }
