@@ -29,9 +29,8 @@ def display():
 	else:
 		file = open(f'{fname}', 'r', encoding='utf8')
 
-	print("\033[92m"+file.read()+"\033[0m")
+	print("\n\033[92m"+file.read()+"\033[0m\n")
 	file.close()
-
 
 if __name__ == '__main__':
 	display()

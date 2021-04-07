@@ -22,27 +22,53 @@
 #CROSSED = \033[9m
 #END = \033[0m
 from time import sleep
-from progress.bar import Bar
+import sys
+import os
+from remove import remove
+def del_lines(i, fname):
+    for j in range(i):
+        delete_1_line()
+        remove(fname)
+def delete_1_line():
+    sys.stdout.write('\x1b[1A')
+    sys.stdout.write('\x1b[2K')
+
 def create():
 	fname = input('\033[32mEnter filename (default: code.vypr):\033[0m') or ' '
 	if fname == ' ':
 		file = open('code.vypr', 'w', encoding='utf8')
+  		
 		file.write("import modulename\nint main()\n{\n	return 0;\n}")
 	else:
 		file = open(f'{fname}.vypr', "w", encoding='utf8')
-		print(
-			'\033[32mWhat Do You Want To Write To Your File? [Write "EOF" (without quotes) to end]:\033[0m')
+		print('''\033[32mWhat Do You Want To Write To Your File? 
+        [Write "$EOF" (without quotes) to end]
+        [Write "$RET" (without quotes) to delete upper line]
+        [Write "$REM" (without quotes) to clear file]\033[0m''')
 		print('> ', end='')
 		text = input()
-		while text != 'EOF':
-			file.write(text+'\n')
-			print('> ', end='')
-			text = input("\033[7m"+"\033[0m")
+		while text != '$EOF' and text!='\n$EOF':
+			if(text=='$RET' or text=='\n$RET'):
+				file.close()
+				delete_1_line()
+				del_lines(1,f'{fname}.vypr')
+				file=open(f'{fname}.vypr',"a+")
+				print('> ', end='')
+				text =input()
+			elif (text=='$REM' or text =='\n$REM'):
+				delete_1_line()
+				delete_1_line()
+				file.close()
+				with open(f'{fname}.vypr','w') as f:
+					f.write('')
+				file=open(f'{fname}.vypr',"a+")
+				text = input("\b ")
+			else:
+				file.write(text+'\n')
+				print('> ', end='')
+				text = input()
 	file.close()
-	with Bar('Processing', max=20) as bar:
-		for i in range(20):
-			sleep(.05)
-			bar.next()
+
 	print("\033[93mFile Created Successfully...\033[0m")
 
 
