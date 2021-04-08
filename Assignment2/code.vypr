@@ -1,0 +1,5 @@
+import modulename
+int main()
+{
+	return 0;
+}

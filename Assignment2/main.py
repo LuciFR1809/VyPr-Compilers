@@ -21,7 +21,8 @@ from create import create
 from display import display
 from lexer import lexer
 from other import other
-
+cls = lambda: os.system('cls')
+cls()
 print('''
 			  Welcome to\033[1;33m
 
