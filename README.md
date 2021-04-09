@@ -1,6 +1,6 @@
 # VyPr
 **VyPR-Toy lang creation in Python (Compilers Project)**
-### Assignment-1
+## Assignment-1
 - [x] DFA Creation
 - [x] CLI for easy operation
 - [x] removes whitespaces & comments
