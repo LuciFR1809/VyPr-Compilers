@@ -28,7 +28,7 @@ import os
 from remove import remove
 def del_lines(i, fname):
     for j in range(i):
-        delete_1_line()
+        sys.stdout.write('\x1b[1A')
         remove(fname)
 
 def delete_1_line():
