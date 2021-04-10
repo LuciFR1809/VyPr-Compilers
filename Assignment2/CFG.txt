@@ -1,4 +1,5 @@
 // Remove 'real' keyword and add 'do' keyword
+// Change sign algo from operator to operator | keyword
 
 ID == identifier
 STR_LIT == string literal
@@ -50,13 +51,14 @@ S -> IMPORT_LIST FUNC_LIST
 
                                             ARITH_OP_3 -> << | >>
 
-                                            OUT_STMT_5 -> ( OUT_STMT ) | ID | CONST | FUNC_CALL
+                                            OUT_STMT_5 -> OUT_STMT_6 | ! OUT_STMT_6
+                                                OUT_STMT_6 -> ( OUT_STMT ) | ID | CONST | FUNC_CALL
 
-                                                CONST -> STR_LIT | INT_LIT | FLT_LIT | BOOL_LIT
-                                                    BOOL_LIT -> true | false
+                                                    CONST -> STR_LIT | INT_LIT | FLT_LIT | BOOL_LIT
+                                                        BOOL_LIT -> true | false
 
-                                                FUNC_CALL -> ID ( ARG_LIST ) | ID ( )
-                                                    ARG_LIST -> OUT_STMT | OUT_STMT , ARG_LIST
+                                                    FUNC_CALL -> ID ( ARG_LIST ) | ID ( )
+                                                        ARG_LIST -> OUT_STMT | OUT_STMT , ARG_LIST
 
                         RET_STMT -> return OUT_STMT
 
