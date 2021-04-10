@@ -1,3 +1,5 @@
+// Remove 'real' keyword and add 'do' keyword
+
 ID == identifier
 STR_LIT == string literal
 INT_LIT == integer literal
@@ -65,7 +67,12 @@ S -> IMPORT_LIST FUNC_LIST
 
                     BLOCK -> COND_BLOCK | LOOP_BLOCK
 
-                        COND_BLOCK -> if ( OUT_STMT ) STMT | if ( OUT_STMT ) STMT else STMT
+                        COND_BLOCK -> if ( OUT_STMT ) STMT | if ( OUT_STMT ) STMT else STMT | switch ( OUT_STMT ) { CASE_LIST }
+                            CASE_LIST -> SINGLE_CASE CASE_LIST | DEFAULT_CASE | empty
+
+                                SINGLE_CASE -> case CONST : STMT_LIST
+
+                                DEFAULT_CASE -> default : STMT_LIST
                         
                         LOOP_BLOCK -> while ( OUT_STMT ) STMT
                                     | for ( ; ; ) STMT

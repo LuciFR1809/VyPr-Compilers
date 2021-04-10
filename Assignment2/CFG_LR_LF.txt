@@ -89,6 +89,12 @@
               BLOCK -> COND_BLOCK
                      | LOOP_BLOCK
          COND_BLOCK -> if ( OUT_STMT ) STMT COND_BLOCK'
+                     | switch ( OUT_STMT ) { CASE_LIST }
+          CASE_LIST -> SINGLE_CASE CASE_LIST
+                     | DEFAULT_CASE
+                     | ϵ
+        SINGLE_CASE -> case CONST : STMT_LIST
+       DEFAULT_CASE -> default : STMT_LIST
          LOOP_BLOCK -> for ( LOOP_BLOCK'''''''
                      | while ( OUT_STMT ) STMT
                      | do STMT while ( OUT_STMT ) ;
