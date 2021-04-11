@@ -44,4 +44,10 @@ COND_BLOCK -> if ( OUT_STMT ) STMT | if ( OUT_STMT ) STMT else STMT | switch ( O
 CASE_LIST -> SINGLE_CASE CASE_LIST | DEFAULT_CASE | ϵ
 SINGLE_CASE -> case CONST : STMT_LIST
 DEFAULT_CASE -> default : STMT_LIST
+<<<<<<< HEAD
 LOOP_BLOCK -> while ( OUT_STMT ) STMT | for ( ; ; ) STMT | for ( DECL_STMT ; ; ) STMT | for ( ; OUT_STMT ; ) STMT | for ( ; ; INC_STMT ) STMT | for ( DECL_STMT ; OUT_STMT ; ) STMT | for ( DECL_STMT ; ; INC_STMT ) STMT | for ( ; OUT_STMT ; INC_STMT ) STMT | for ( DECL_STMT ; OUT_STMT ; INC_STMT ) STMT | do STMT while ( OUT_STMT ) ;
+=======
+LOOP_BLOCK -> while ( OUT_STMT ) STMT
+            | for ( DECL_STMT ; OUT_STMT ; INC_STMT ) STMT
+            | do STMT while ( OUT_STMT ) ;
+>>>>>>> e63a1d3c3effb6da40148a725861d6b41136f3b2

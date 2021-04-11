@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 S -> IMPORT_LIST FUNC_LIST
 IMPORT_LIST -> IMPORT_STMT IMPORT_LIST | ϵ
 IMPORT_STMT -> import ID ;
@@ -71,3 +72,178 @@ LOOP_BLOCK'''''' -> ID LOOP_BLOCK''''''''' | ; LOOP_BLOCK''''' | ( OUT_STMT ) OU
 LOOP_BLOCK''''''' -> ; LOOP_BLOCK'''''' | int ID_ASSN_LIST ; LOOP_BLOCK'''' | float ID_ASSN_LIST ; LOOP_BLOCK'''' | boolean ID_ASSN_LIST ; LOOP_BLOCK'''' | char ID_ASSN_LIST ; LOOP_BLOCK'''' | string ID_ASSN_LIST ; LOOP_BLOCK''''
 LOOP_BLOCK'''''''' -> << OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK' | >> OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK' | ϵ OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK' | ( FUNC_CALL' OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
 LOOP_BLOCK''''''''' -> << OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK''' | >> OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK''' | ϵ OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK''' | ( FUNC_CALL' OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
+=======
+                   S -> IMPORT_LIST FUNC_LIST
+         IMPORT_LIST -> IMPORT_STMT IMPORT_LIST
+                      | ϵ
+         IMPORT_STMT -> import ID ;
+           FUNC_LIST -> FUNC FUNC_LIST
+                      | ϵ
+                FUNC -> RET_TYPE ID ( PARAMS ) { STMT_LIST }
+            RET_TYPE -> DATA_TYPE
+                      | void
+           DATA_TYPE -> int
+                      | float
+                      | boolean
+                      | char
+                      | string
+              PARAMS -> DECL_LIST
+                      | ϵ
+           DECL_LIST -> DECL_SINGLE DECL_LIST'
+         DECL_SINGLE -> int ID
+                      | float ID
+                      | boolean ID
+                      | char ID
+                      | string ID
+           STMT_LIST -> STMT STMT_LIST
+                      | ϵ
+                STMT -> SINGLE_STMT ;
+                      | BLOCK
+                      | { STMT_LIST }
+         SINGLE_STMT -> DECL_STMT
+                      | ASSN_STMT
+                      | OUT_STMT
+                      | RET_STMT
+                      | INC_STMT
+                      | FLOW_STMT
+           DECL_STMT -> int ID_ASSN_LIST
+                      | float ID_ASSN_LIST
+                      | boolean ID_ASSN_LIST
+                      | char ID_ASSN_LIST
+                      | string ID_ASSN_LIST
+        ID_ASSN_LIST -> ASSN_STMT ID_ASSN_LIST''
+                      | ID ID_ASSN_LIST'
+           ASSN_STMT -> ID = OUT_STMT
+            OUT_STMT -> OUT_STMT_1 OUT_STMT'
+           COMP_OP_1 -> &&
+                      | ||
+          OUT_STMT_1 -> OUT_STMT_2 OUT_STMT_1'
+           COMP_OP_2 -> ==
+                      | <=
+                      | >=
+                      | !=
+                      | <
+                      | >
+          OUT_STMT_2 -> OUT_STMT_3 OUT_STMT_2'
+          ARITH_OP_1 -> +
+                      | -
+          OUT_STMT_3 -> OUT_STMT_4 OUT_STMT_3'
+          ARITH_OP_2 -> *
+                      | /
+                      | %
+          OUT_STMT_4 -> OUT_STMT_5 OUT_STMT_4'
+          ARITH_OP_3 -> <<
+                      | >>
+          OUT_STMT_5 -> OUT_STMT_6
+                      | ! OUT_STMT_6
+          OUT_STMT_6 -> ( OUT_STMT )
+                      | ID
+                      | CONST
+                      | FUNC_CALL
+               CONST -> STR_LIT
+                      | INT_LIT
+                      | FLT_LIT
+                      | BOOL_LIT
+            BOOL_LIT -> true
+                      | false
+           FUNC_CALL -> ID ( FUNC_CALL'
+            ARG_LIST -> ID ARG_LIST''''''''''''
+                      | false OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''''''''''
+                      | true OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''''''
+                      | FLT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''''''''
+                      | INT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''''
+                      | STR_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''''''
+                      | ! OUT_STMT_6 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''''
+                      | ( OUT_STMT ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''
+            RET_STMT -> return OUT_STMT
+            INC_STMT -> ID INC_OP OUT_STMT
+              INC_OP -> +=
+                      | -=
+                      | *=
+                      | /=
+                      | %=
+           FLOW_STMT -> break
+                      | continue
+               BLOCK -> COND_BLOCK
+                      | LOOP_BLOCK
+          COND_BLOCK -> if ( OUT_STMT ) STMT COND_BLOCK'
+                      | switch ( OUT_STMT ) { CASE_LIST }
+           CASE_LIST -> SINGLE_CASE CASE_LIST
+                      | DEFAULT_CASE
+                      | ϵ
+         SINGLE_CASE -> case CONST : STMT_LIST
+        DEFAULT_CASE -> default : STMT_LIST
+          LOOP_BLOCK -> while ( OUT_STMT ) STMT
+                      | for ( DECL_STMT ; OUT_STMT ; INC_STMT ) STMT
+                      | do STMT while ( OUT_STMT ) ;
+           OUT_STMT' -> && OUT_STMT_1 OUT_STMT'
+                      | || OUT_STMT_1 OUT_STMT'
+                      | ϵ
+         OUT_STMT_1' -> == OUT_STMT_2 OUT_STMT_1'
+                      | <= OUT_STMT_2 OUT_STMT_1'
+                      | >= OUT_STMT_2 OUT_STMT_1'
+                      | != OUT_STMT_2 OUT_STMT_1'
+                      | < OUT_STMT_2 OUT_STMT_1'
+                      | > OUT_STMT_2 OUT_STMT_1'
+                      | ϵ
+         OUT_STMT_2' -> + OUT_STMT_3 OUT_STMT_2'
+                      | - OUT_STMT_3 OUT_STMT_2'
+                      | ϵ
+         OUT_STMT_3' -> * OUT_STMT_4 OUT_STMT_3'
+                      | / OUT_STMT_4 OUT_STMT_3'
+                      | % OUT_STMT_4 OUT_STMT_3'
+                      | ϵ
+         OUT_STMT_4' -> << OUT_STMT_5 OUT_STMT_4'
+                      | >> OUT_STMT_5 OUT_STMT_4'
+                      | ϵ
+          DECL_LIST' -> ϵ
+                      | , DECL_LIST
+       ID_ASSN_LIST' -> ϵ
+                      | , ID_ASSN_LIST
+      ID_ASSN_LIST'' -> ϵ
+                      | , ID_ASSN_LIST
+          FUNC_CALL' -> ID ARG_LIST'''''''''''' )
+                      | false OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''''''' )
+                      | true OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''''''''' )
+                      | FLT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''''' )
+                      | INT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''''''' )
+                      | STR_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''' )
+                      | ! OUT_STMT_6 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''' )
+                      | ( OUT_STMT ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'' )
+                      | )
+           ARG_LIST' -> ϵ
+                      | , ARG_LIST
+          ARG_LIST'' -> ϵ
+                      | , ARG_LIST
+         ARG_LIST''' -> ϵ
+                      | , ARG_LIST
+        ARG_LIST'''' -> ϵ
+                      | , ARG_LIST
+       ARG_LIST''''' -> ϵ
+                      | , ARG_LIST
+      ARG_LIST'''''' -> ϵ
+                      | , ARG_LIST
+     ARG_LIST''''''' -> ϵ
+                      | , ARG_LIST
+    ARG_LIST'''''''' -> ϵ
+                      | , ARG_LIST
+   ARG_LIST''''''''' -> ϵ
+                      | , ARG_LIST
+  ARG_LIST'''''''''' -> ϵ
+                      | , ARG_LIST
+ ARG_LIST''''''''''' -> ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''
+                      | ID ARG_LIST'''''''''''' ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'
+                      | false OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''''''' ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'
+                      | true OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''''''''' ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'
+                      | FLT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''''' ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'
+                      | INT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST''''''' ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'
+                      | STR_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''' ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'
+                      | ! OUT_STMT_6 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''' ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'
+                      | ( OUT_STMT ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'' ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'
+ARG_LIST'''''''''''' -> ( ARG_LIST'''''''''''
+                      | << OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''
+                      | >> OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''
+                      | OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''
+         COND_BLOCK' -> ϵ
+                      | else STMT
+>>>>>>> e63a1d3c3effb6da40148a725861d6b41136f3b2
