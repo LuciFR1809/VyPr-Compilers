@@ -1,4 +1,4 @@
-D == identifier
+ID == identifier
 STR_LIT == string literal
 INT_LIT == integer literal
 FLT_LIT == floating literal
@@ -12,7 +12,7 @@ S -> IMPORT_LIST FUNC_LIST
         FUNC -> RET_TYPE ID ( PARAMS ) { STMT_LIST }
 
             RET_TYPE -> DATA_TYPE | void
-                DATA_TYPE -> int | float | boolean | char | string
+                DATA_TYPE -> int | float | boolean | string
 
             PARAMS -> DECL_LIST | empty
                 DECL_LIST -> DECL_SINGLE | DECL_SINGLE , DECL_LIST

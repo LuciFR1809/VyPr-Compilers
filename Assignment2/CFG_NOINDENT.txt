@@ -9,7 +9,7 @@ IMPORT_STMT -> import ID ;
 FUNC_LIST -> FUNC FUNC_LIST | ϵ
 FUNC -> RET_TYPE ID ( PARAMS ) { STMT_LIST }
 RET_TYPE -> DATA_TYPE | void
-DATA_TYPE -> int | float | boolean | char | string
+DATA_TYPE -> int | float | boolean | string
 PARAMS -> DECL_LIST | ϵ
 DECL_LIST -> DECL_SINGLE | DECL_SINGLE , DECL_LIST
 DECL_SINGLE -> DATA_TYPE ID
@@ -44,6 +44,4 @@ COND_BLOCK -> if ( OUT_STMT ) STMT | if ( OUT_STMT ) STMT else STMT | switch ( O
 CASE_LIST -> SINGLE_CASE CASE_LIST | DEFAULT_CASE | ϵ
 SINGLE_CASE -> case CONST : STMT_LIST
 DEFAULT_CASE -> default : STMT_LIST
-LOOP_BLOCK -> while ( OUT_STMT ) STMT
-            | for ( DECL_STMT ; OUT_STMT ; INC_STMT ) STMT
-            | do STMT while ( OUT_STMT ) ;
+LOOP_BLOCK -> while ( OUT_STMT ) STMT | for ( DECL_STMT ; OUT_STMT ; INC_STMT ) STMT | do STMT while ( OUT_STMT ) ;

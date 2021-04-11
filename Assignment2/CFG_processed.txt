@@ -1,4 +1,4 @@
-S -> IMPORT_LIST FUNC_LIST
+                   S -> IMPORT_LIST FUNC_LIST
          IMPORT_LIST -> IMPORT_STMT IMPORT_LIST
                       | ϵ
          IMPORT_STMT -> import ID ;
@@ -10,7 +10,6 @@ S -> IMPORT_LIST FUNC_LIST
            DATA_TYPE -> int
                       | float
                       | boolean
-                      | char
                       | string
               PARAMS -> DECL_LIST
                       | ϵ
@@ -18,7 +17,6 @@ S -> IMPORT_LIST FUNC_LIST
          DECL_SINGLE -> int ID
                       | float ID
                       | boolean ID
-                      | char ID
                       | string ID
            STMT_LIST -> STMT STMT_LIST
                       | ϵ
@@ -34,7 +32,6 @@ S -> IMPORT_LIST FUNC_LIST
            DECL_STMT -> int ID_ASSN_LIST
                       | float ID_ASSN_LIST
                       | boolean ID_ASSN_LIST
-                      | char ID_ASSN_LIST
                       | string ID_ASSN_LIST
         ID_ASSN_LIST -> ASSN_STMT ID_ASSN_LIST''
                       | ID ID_ASSN_LIST'
