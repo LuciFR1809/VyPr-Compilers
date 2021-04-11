@@ -156,8 +156,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -186,8 +186,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -215,8 +215,8 @@
         "STR_LIT": "r23",
         "INT_LIT": "r23",
         "FLT_LIT": "r23",
-        "TRUE": "r23",
-        "FALSE": "r23",
+        "true": "r23",
+        "false": "r23",
         "return": "r23",
         "break": "r23",
         "continue": "r23",
@@ -242,8 +242,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -284,8 +284,8 @@
         "STR_LIT": "r88",
         "INT_LIT": "r88",
         "FLT_LIT": "r88",
-        "TRUE": "r88",
-        "FALSE": "r88",
+        "true": "r88",
+        "false": "r88",
         "return": "r88",
         "break": "r88",
         "continue": "r88",
@@ -311,8 +311,8 @@
         "STR_LIT": "r89",
         "INT_LIT": "r89",
         "FLT_LIT": "r89",
-        "TRUE": "r89",
-        "FALSE": "r89",
+        "true": "r89",
+        "false": "r89",
         "return": "r89",
         "break": "r89",
         "continue": "r89",
@@ -376,8 +376,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "55": {
         ";": "r86"
@@ -409,8 +409,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -526,8 +526,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "68": {
         "ID": "s99",
@@ -536,8 +536,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "69": {
         ";": "r62",
@@ -731,8 +731,8 @@
         "STR_LIT": "r22",
         "INT_LIT": "r22",
         "FLT_LIT": "r22",
-        "TRUE": "r22",
-        "FALSE": "r22",
+        "true": "r22",
+        "false": "r22",
         "return": "r22",
         "break": "r22",
         "continue": "r22",
@@ -776,8 +776,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "88": {
         "ID": "s99",
@@ -786,8 +786,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "89": {
         "ID": "s132",
@@ -797,8 +797,8 @@
         "STR_LIT": "s137",
         "INT_LIT": "s136",
         "FLT_LIT": "s135",
-        "TRUE": "s134",
-        "FALSE": "s133"
+        "true": "s134",
+        "false": "s133"
     },
     "90": {
         "ID": "r81",
@@ -807,8 +807,8 @@
         "STR_LIT": "r81",
         "INT_LIT": "r81",
         "FLT_LIT": "r81",
-        "TRUE": "r81",
-        "FALSE": "r81"
+        "true": "r81",
+        "false": "r81"
     },
     "91": {
         "ID": "r82",
@@ -817,8 +817,8 @@
         "STR_LIT": "r82",
         "INT_LIT": "r82",
         "FLT_LIT": "r82",
-        "TRUE": "r82",
-        "FALSE": "r82"
+        "true": "r82",
+        "false": "r82"
     },
     "92": {
         "ID": "r83",
@@ -827,8 +827,8 @@
         "STR_LIT": "r83",
         "INT_LIT": "r83",
         "FLT_LIT": "r83",
-        "TRUE": "r83",
-        "FALSE": "r83"
+        "true": "r83",
+        "false": "r83"
     },
     "93": {
         "ID": "r84",
@@ -837,8 +837,8 @@
         "STR_LIT": "r84",
         "INT_LIT": "r84",
         "FLT_LIT": "r84",
-        "TRUE": "r84",
-        "FALSE": "r84"
+        "true": "r84",
+        "false": "r84"
     },
     "94": {
         "ID": "r85",
@@ -847,8 +847,8 @@
         "STR_LIT": "r85",
         "INT_LIT": "r85",
         "FLT_LIT": "r85",
-        "TRUE": "r85",
-        "FALSE": "r85"
+        "true": "r85",
+        "false": "r85"
     },
     "95": {
         ";": "r38",
@@ -862,8 +862,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "97": {
         "ID": "s99",
@@ -872,8 +872,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "98": {
         ";": "r79"
@@ -906,8 +906,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "101": {
         "ID": "s99",
@@ -916,8 +916,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "102": {
         "ID": "s99",
@@ -926,8 +926,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "103": {
         "int": "s48",
@@ -965,8 +965,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "107": {
         "ID": "s99",
@@ -975,8 +975,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "108": {
         "ID": "s99",
@@ -985,8 +985,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "109": {
         "ID": "s99",
@@ -995,8 +995,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "110": {
         "ID": "s99",
@@ -1005,8 +1005,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "111": {
         "ID": "s99",
@@ -1015,8 +1015,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "112": {
         ";": "r48",
@@ -1045,8 +1045,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "114": {
         "ID": "s99",
@@ -1055,8 +1055,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "115": {
         ";": "r51",
@@ -1085,8 +1085,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "117": {
         "ID": "s99",
@@ -1095,8 +1095,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "118": {
         "ID": "s99",
@@ -1105,8 +1105,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "119": {
         ";": "r55",
@@ -1135,8 +1135,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "121": {
         "ID": "s99",
@@ -1145,8 +1145,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "122": {
         ";": "r59",
@@ -1184,8 +1184,8 @@
         "STR_LIT": "r24",
         "INT_LIT": "r24",
         "FLT_LIT": "r24",
-        "TRUE": "r24",
-        "FALSE": "r24",
+        "true": "r24",
+        "false": "r24",
         "return": "r24",
         "break": "r24",
         "continue": "r24",
@@ -1364,8 +1364,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "139": {
         "ID": "s99",
@@ -1374,8 +1374,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "140": {
         ";": "r134",
@@ -1749,8 +1749,8 @@
         "STR_LIT": "s204",
         "INT_LIT": "s203",
         "FLT_LIT": "s202",
-        "TRUE": "s201",
-        "FALSE": "s200"
+        "true": "s201",
+        "false": "s200"
     },
     "166": {
         "ID": "s99",
@@ -1759,8 +1759,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "167": {
         "ID": "s99",
@@ -1769,8 +1769,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "168": {
         ")": "r112",
@@ -1961,8 +1961,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -1987,8 +1987,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -2005,8 +2005,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "182": {
         "ID": "s99",
@@ -2015,8 +2015,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "183": {
         ";": "r103",
@@ -2441,8 +2441,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "206": {
         "ID": "s99",
@@ -2451,8 +2451,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "207": {
         ")": "r119",
@@ -2657,8 +2657,8 @@
         "STR_LIT": "r168",
         "INT_LIT": "r168",
         "FLT_LIT": "r168",
-        "TRUE": "r168",
-        "FALSE": "r168",
+        "true": "r168",
+        "false": "r168",
         "return": "r168",
         "break": "r168",
         "continue": "r168",
@@ -2689,8 +2689,8 @@
         "STR_LIT": "r97",
         "INT_LIT": "r97",
         "FLT_LIT": "r97",
-        "TRUE": "r97",
-        "FALSE": "r97",
+        "true": "r97",
+        "false": "r97",
         "return": "r97",
         "break": "r97",
         "continue": "r97",
@@ -3029,8 +3029,8 @@
         "STR_LIT": "r90",
         "INT_LIT": "r90",
         "FLT_LIT": "r90",
-        "TRUE": "r90",
-        "FALSE": "r90",
+        "true": "r90",
+        "false": "r90",
         "return": "r90",
         "break": "r90",
         "continue": "r90",
@@ -3055,8 +3055,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -3081,8 +3081,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "247": {
         ":": "s273"
@@ -3417,8 +3417,8 @@
         "STR_LIT": "r169",
         "INT_LIT": "r169",
         "FLT_LIT": "r169",
-        "TRUE": "r169",
-        "FALSE": "r169",
+        "true": "r169",
+        "false": "r169",
         "return": "r169",
         "break": "r169",
         "continue": "r169",
@@ -3444,8 +3444,8 @@
         "STR_LIT": "r91",
         "INT_LIT": "r91",
         "FLT_LIT": "r91",
-        "TRUE": "r91",
-        "FALSE": "r91",
+        "true": "r91",
+        "false": "r91",
         "return": "r91",
         "break": "r91",
         "continue": "r91",
@@ -3477,8 +3477,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -3511,8 +3511,8 @@
         "STR_LIT": "r99",
         "INT_LIT": "r99",
         "FLT_LIT": "r99",
-        "TRUE": "r99",
-        "FALSE": "r99",
+        "true": "r99",
+        "false": "r99",
         "return": "r99",
         "break": "r99",
         "continue": "r99",
@@ -3679,8 +3679,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "290": {
         ")": "r153",
@@ -3755,8 +3755,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -3783,8 +3783,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76",
+        "true": "s75",
+        "false": "s76",
         "return": "s54",
         "break": "s55",
         "continue": "s56",
@@ -4006,8 +4006,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "319": {
         "ID": "s99",
@@ -4016,8 +4016,8 @@
         "STR_LIT": "s71",
         "INT_LIT": "s72",
         "FLT_LIT": "s73",
-        "TRUE": "s75",
-        "FALSE": "s76"
+        "true": "s75",
+        "false": "s76"
     },
     "320": {
         ")": "s353"
@@ -4029,8 +4029,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "322": {
         ")": "s355"
@@ -4042,8 +4042,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "324": {
         ")": "s357"
@@ -4055,8 +4055,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "326": {
         ")": "s359"
@@ -4068,8 +4068,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "328": {
         ")": "s361"
@@ -4081,8 +4081,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "330": {
         ")": "r141",
@@ -4126,8 +4126,8 @@
         "STR_LIT": "r98",
         "INT_LIT": "r98",
         "FLT_LIT": "r98",
-        "TRUE": "r98",
-        "FALSE": "r98",
+        "true": "r98",
+        "false": "r98",
         "return": "r98",
         "break": "r98",
         "continue": "r98",
@@ -4437,8 +4437,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "365": {
         ")": "r137",
@@ -4454,8 +4454,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "368": {
         ")": "r102",
@@ -4633,8 +4633,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "389": {
         ")": "r140"
@@ -4869,8 +4869,8 @@
         "STR_LIT": "s317",
         "INT_LIT": "s316",
         "FLT_LIT": "s315",
-        "TRUE": "s314",
-        "FALSE": "s313"
+        "true": "s314",
+        "false": "s313"
     },
     "409": {
         ")": "r116",
