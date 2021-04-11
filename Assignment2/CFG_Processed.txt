@@ -98,8 +98,8 @@
                       | ϵ
          SINGLE_CASE -> case CONST : STMT_LIST
         DEFAULT_CASE -> default : STMT_LIST
-          LOOP_BLOCK -> for ( LOOP_BLOCK'''''''
-                      | while ( OUT_STMT ) STMT
+          LOOP_BLOCK -> while ( OUT_STMT ) STMT
+                      | for ( DECL_STMT ; OUT_STMT ; INC_STMT ) STMT
                       | do STMT while ( OUT_STMT ) ;
            OUT_STMT' -> && OUT_STMT_1 OUT_STMT'
                       | || OUT_STMT_1 OUT_STMT'
@@ -168,46 +168,6 @@
 ARG_LIST'''''''''''' -> ( ARG_LIST'''''''''''
                       | << OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''
                       | >> OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''
-                      | ϵ OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''
+                      | OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ARG_LIST'''''
          COND_BLOCK' -> ϵ
                       | else STMT
-         LOOP_BLOCK' -> ) STMT
-                      | ID INC_OP OUT_STMT ) STMT
-        LOOP_BLOCK'' -> ) STMT
-                      | ID INC_OP OUT_STMT ) STMT
-       LOOP_BLOCK''' -> ) STMT
-                      | ID INC_OP OUT_STMT ) STMT
-      LOOP_BLOCK'''' -> ID LOOP_BLOCK''''''''
-                      | ; LOOP_BLOCK''
-                      | ( OUT_STMT ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | STR_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | INT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | FLT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | true OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | false OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | ! OUT_STMT_6 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-     LOOP_BLOCK''''' -> ) STMT
-                      | ID INC_OP OUT_STMT ) STMT
-    LOOP_BLOCK'''''' -> ID LOOP_BLOCK'''''''''
-                      | ; LOOP_BLOCK'''''
-                      | ( OUT_STMT ) OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | STR_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | INT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | FLT_LIT OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | true OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | false OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | ! OUT_STMT_6 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-   LOOP_BLOCK''''''' -> ; LOOP_BLOCK''''''
-                      | int ID_ASSN_LIST ; LOOP_BLOCK''''
-                      | float ID_ASSN_LIST ; LOOP_BLOCK''''
-                      | boolean ID_ASSN_LIST ; LOOP_BLOCK''''
-                      | char ID_ASSN_LIST ; LOOP_BLOCK''''
-                      | string ID_ASSN_LIST ; LOOP_BLOCK''''
-  LOOP_BLOCK'''''''' -> << OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | >> OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | ϵ OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
-                      | ( FUNC_CALL' OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'
- LOOP_BLOCK''''''''' -> << OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | >> OUT_STMT_5 OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | ϵ OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
-                      | ( FUNC_CALL' OUT_STMT_4' OUT_STMT_3' OUT_STMT_2' OUT_STMT_1' OUT_STMT' ; LOOP_BLOCK'''
