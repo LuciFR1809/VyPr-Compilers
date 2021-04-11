@@ -1,4 +1,4 @@
-// Remove 'real' keyword and add 'do' keyword
+// Remove 'real' and 'char' keyword and add 'do' keyword
 // Change sign algo from operator to operator | keyword
 
 ID == identifier
@@ -77,12 +77,5 @@ S -> IMPORT_LIST FUNC_LIST
                                 DEFAULT_CASE -> default : STMT_LIST
                         
                         LOOP_BLOCK -> while ( OUT_STMT ) STMT
-                                    | for ( ; ; ) STMT
-                                    | for ( DECL_STMT ; ; ) STMT
-                                    | for ( ; OUT_STMT ; ) STMT
-                                    | for ( ; ; INC_STMT ) STMT
-                                    | for ( DECL_STMT ; OUT_STMT ; ) STMT
-                                    | for ( DECL_STMT ; ; INC_STMT ) STMT
-                                    | for ( ; OUT_STMT ; INC_STMT ) STMT
                                     | for ( DECL_STMT ; OUT_STMT ; INC_STMT ) STMT
                                     | do STMT while ( OUT_STMT ) ;
