@@ -1,0 +1,1 @@
+int ID ( int ID ) { if ( ID <= INT_LIT ) return INT_LIT ; else return ID * ID ( ID - INT_LIT ) ; } void ID ( ) { int ID ; ID = INT_LIT ; while ( ID <= INT_LIT ) { ID ( ID ) ; ID ( ID ( ID ) ) ; ID ( ) ; ID = ID + INT_LIT ; } }
