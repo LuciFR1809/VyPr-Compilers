@@ -35,7 +35,7 @@ import sys
 
 
 # Storing tokens in lists
-keywords = ['int', 'float', 'real', 'void', 'boolean', 'char', 'string', 'for', 'if', 'else',
+keywords = ['int', 'float', 'do', 'void', 'boolean', 'string', 'for', 'if', 'else',
 			'while', 'break', 'continue', 'switch', 'default', 'return', 'case', 'import', 'true', 'false']
 
 operators = ['+=', '-=', '*=', '/=', '%=', '==', '<=', '>=', '!=', '<<',
@@ -122,21 +122,21 @@ def DFA(check_str, prev_op):
 						orig_str = check_str[:index+1]
 						if isFloat:
 							pairs.append(
-								['floating literal', prev_op[-1] + orig_str])
+								['floating_literal', prev_op[-1] + orig_str])
 							break
 						else:
 							pairs.append(
-								['integer literal', prev_op[-1] + orig_str])
+								['integer_literal', prev_op[-1] + orig_str])
 							break
 					else:
 						matches.append(index+1)
 						if isFloat:
 							pairs.append(
-								['floating literal', check_str[:index+1]])
+								['floating_literal', check_str[:index+1]])
 							break
 						else:
 							pairs.append(
-								['integer literal', check_str[:index+1]])
+								['integer_literal', check_str[:index+1]])
 							break
 
 	# check for comment
@@ -155,7 +155,7 @@ def DFA(check_str, prev_op):
 	final = matches.index(max(matches))
 
 	# SPECIAL CASE - sign operators
-	if prev_op != 'operator' and check_str[0] in sign_term:
+	if (prev_op != 'operator' or prev_op != 'keyword') and check_str[0] in sign_term:
 		final = 0
 
 	end_pos = int(matches[final])
@@ -194,19 +194,25 @@ def lexer(fname=None):
 	else:
 		filename = fname
 	outfile = open(f'{filename.split(".")[0]}_output.txt', 'w', encoding='utf8')
+	parsefile = open(f'{filename.split(".")[0]}_output_parse.txt', 'w', encoding='utf8')
 	with open(filename, 'r', encoding='utf8') as f:
 		filestr = f.read()
 		for lex in lexeme(filestr):
 			if lex['token'] == 'invalid':
 				print(
-					f"\033[31m!!! Error in line {lex['line']} while parsing {lex['lexeme']}\033[0m")
+					f"!!! Error in line {lex['line']} while parsing {lex['lexeme']}")
 				print(
 					f"!!! Error in line {lex['line']} while parsing {lex['lexeme']}", file=outfile)
+				print(
+					f"{lex['line']} <!> Error <!> {lex['lexeme']}", file=parsefile)
+				
 			else:
 				print(
 					f"Line: {lex['line']}, Token: {lex['token']}, Lexeme: {lex['lexeme']}")
 				print(
 					f"Line: {lex['line']}, Token: {lex['token']}, Lexeme: {lex['lexeme']}", file=outfile)
+				print(
+					f"{lex['line']} <!> {lex['token']} <!> {lex['lexeme']}", file = parsefile)
 
 
 if __name__ == '__main__':

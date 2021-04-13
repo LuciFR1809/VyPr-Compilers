@@ -21,6 +21,8 @@ from create import create
 from display import display
 from lexer import lexer
 from other import other
+from parse import parse
+
 cls = lambda: os.system('cls')
 cls()
 print('''
@@ -53,6 +55,7 @@ COMMANDS:
 Create File            -->     CREATE
 Display Code           -->     SHOW
 Show Lexical Analysis  -->     LEX
+Show Syntax Analysis   -->     PARSE
 Other Details          -->     OTHER\033[0m \033[0;31m
 Quit                   -->     QUIT
 \033[0m
@@ -79,6 +82,18 @@ while option.upper() != 'QUIT':
 			print('\033[0;31m File not found... \033[0m')
 			continue
 
+	elif option.upper() == 'PARSE':
+		fname = input('Enter filename (default: code.vypr):') or ' '
+		if fname == ' ':
+			fname = "code.vypr"
+		else:
+			fname = f'{fname}'
+		try:
+			parse(fname)
+		except FileNotFoundError:
+			print('\033[0;31m File not found... \033[0m')
+			continue
+
 	elif option.upper() == 'OTHER':
 		other()
 
@@ -89,7 +104,8 @@ while option.upper() != 'QUIT':
 COMMANDS:
 Create File            -->     CREATE
 Display Code           -->     SHOW
-Show Lexical Analysis  -->     LEX
+Show lexical Analysis  -->     LEX
+Show Syntax Analysis   -->     PARSE
 Other Details          -->     OTHER\033[0m \033[0;31m
 Quit                   -->     QUIT
 \033[0m

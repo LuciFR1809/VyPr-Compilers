@@ -1,0 +1,11 @@
+Line: 1, Token: keyword, Lexeme: import
+Line: 1, Token: identifier, Lexeme: modulename
+Line: 2, Token: keyword, Lexeme: int
+Line: 2, Token: identifier, Lexeme: main
+Line: 2, Token: delimiter, Lexeme: (
+Line: 2, Token: delimiter, Lexeme: )
+Line: 3, Token: delimiter, Lexeme: {
+Line: 4, Token: keyword, Lexeme: return
+Line: 4, Token: integer literal, Lexeme: 0
+Line: 4, Token: delimiter, Lexeme: ;
+Line: 5, Token: delimiter, Lexeme: }
