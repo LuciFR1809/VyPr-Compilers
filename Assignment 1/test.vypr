@@ -2,7 +2,7 @@
 
 int fact(int n) {
 	if (n <= 1)
-		return 1;
+		return (-1);
 	else
 		return n * fact(n - 1);
 }
@@ -13,6 +13,6 @@ void main(void) {
 		write(x);
 		write(fact(x));
 		writeln();
-		x = x + 1;
+		x = x+1;
 	}
 }

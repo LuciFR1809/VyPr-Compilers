@@ -12,7 +12,10 @@ Line: 4, Token: operator, Lexeme: <=
 Line: 4, Token: integer literal, Lexeme: 1
 Line: 4, Token: delimiter, Lexeme: )
 Line: 5, Token: keyword, Lexeme: return
+Line: 5, Token: delimiter, Lexeme: (
+Line: 5, Token: operator, Lexeme: -
 Line: 5, Token: integer literal, Lexeme: 1
+Line: 5, Token: delimiter, Lexeme: )
 Line: 5, Token: delimiter, Lexeme: ;
 Line: 6, Token: keyword, Lexeme: else
 Line: 7, Token: keyword, Lexeme: return
@@ -64,10 +67,7 @@ Line: 15, Token: delimiter, Lexeme: (
 Line: 15, Token: delimiter, Lexeme: )
 Line: 15, Token: delimiter, Lexeme: ;
 Line: 16, Token: identifier, Lexeme: x
-Line: 16, Token: operator, Lexeme: =
-Line: 16, Token: identifier, Lexeme: x
 Line: 16, Token: operator, Lexeme: +
-Line: 16, Token: integer literal, Lexeme: 1
 Line: 16, Token: delimiter, Lexeme: ;
 Line: 17, Token: delimiter, Lexeme: }
 Line: 18, Token: delimiter, Lexeme: }
