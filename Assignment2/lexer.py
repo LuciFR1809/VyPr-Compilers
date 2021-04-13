@@ -106,7 +106,7 @@ def DFA(check_str, prev_op, prev_lex):
         for index, letter in enumerate(check_str[1:]):
             if letter == '"' and check_str[index] != '\\':
                 matches.append(index+2)
-                pairs.append(['string_literal', check_str[:index+2]])
+                pairs.append(['string literal', check_str[:index+2]])
                 break
 
     # check for numerical literal

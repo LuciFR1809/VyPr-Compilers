@@ -1,6 +1,7 @@
 import os
 import sys
-def remove(fname):
+def remove():
+    fname = sys.argv[1]
     fd=open(fname,"r")
     d=fd.read()
     fd.close()
