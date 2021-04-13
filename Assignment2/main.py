@@ -1,19 +1,19 @@
-#BLACK = \033[0;30m
-#RED = \033[0;31m
-#GREEN = \033[0;32m
-#BROWN = \033[0;33m
-#BLUE = \033[0;34m
-#PURPLE = \033[0;35m
-#CYAN = \033[0;36m
-#YELLOW = \033[1;33m
-#BOLD = \033[1m
-#FAINT = \033[2m
-#ITALIC = \033[3m
-#UNDERLINE = \033[4m
-#BLINK = \033[5m
-#NEGATIVE = \033[7m
-#CROSSED = \033[9m
-#END = \033[0m
+# BLACK = \033[0;30m
+# RED = \033[0;31m
+# GREEN = \033[0;32m
+# BROWN = \033[0;33m
+# BLUE = \033[0;34m
+# PURPLE = \033[0;35m
+# CYAN = \033[0;36m
+# YELLOW = \033[1;33m
+# BOLD = \033[1m
+# FAINT = \033[2m
+# ITALIC = \033[3m
+# UNDERLINE = \033[4m
+# BLINK = \033[5m
+# NEGATIVE = \033[7m
+# CROSSED = \033[9m
+# END = \033[0m
 import os
 import time
 
@@ -23,7 +23,11 @@ from lexer import lexer
 from other import other
 from parse import parse
 
-cls = lambda: os.system('cls')
+
+def cls():
+    return os.system('cls')
+
+
 cls()
 print('''
 			  Welcome to\033[1;33m
@@ -63,44 +67,44 @@ ACTION:''')
 print()
 while option.upper() != 'QUIT':
 
-	if option.upper() == 'CREATE':
-		create()
+    if option.upper() == 'CREATE':
+        create()
 
+    elif option.upper() == 'SHOW':
+        display()
 
-	elif option.upper() == 'SHOW':
-		display()
+    elif option.upper() == 'LEX':
+        fname = input('Enter filename (default: code.vypr):') or ' '
+        if fname == ' ':
+            fname = "Testcases/code.vypr"
+        else:
+            fname = f'Testcases/{fname}'
+        try:
+            lexer(fname)
+        except FileNotFoundError:
+            print('\033[0;31m File not found... \033[0m')
+            continue
 
-	elif option.upper() == 'LEX':
-		fname = input('Enter filename (default: code.vypr):') or ' '
-		if fname == ' ':
-			fname = "code.vypr"
-		else:
-			fname = f'{fname}'
-		try:
-			lexer(fname)
-		except FileNotFoundError:
-			print('\033[0;31m File not found... \033[0m')
-			continue
+    elif option.upper() == 'PARSE':
+        fname = input('Enter filename (default: code.vypr):') or ' '
+        if fname == ' ':
+            fname = "Testcases/code.vypr"
+        else:
+            fname = f'Testcases/{fname}'
+        try:
+            parse(fname)
+        except FileNotFoundError:
+            print('\033[0;31m File not found... \033[0m')
+            continue
 
-	elif option.upper() == 'PARSE':
-		fname = input('Enter filename (default: code.vypr):') or ' '
-		if fname == ' ':
-			fname = "code.vypr"
-		else:
-			fname = f'{fname}'
-		try:
-			parse(fname)
-		except FileNotFoundError:
-			print('\033[0;31m File not found... \033[0m')
-			continue
+    elif option.upper() == 'OTHER':
+        other()
 
-	elif option.upper() == 'OTHER':
-		other()
+    else:
+        print(
+            '\033[0;31m \nCommand not found. Use following available commands \033[0m')
 
-	else:
-		print('\033[0;31m \nCommand not found. Use following available commands \033[0m')
-
-	option = input('''\033[0;32m
+    option = input('''\033[0;32m
 COMMANDS:
 Create File            -->     CREATE
 Display Code           -->     SHOW

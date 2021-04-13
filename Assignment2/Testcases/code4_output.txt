@@ -1,9 +1,11 @@
 Line: 1, Token: keyword, Lexeme: import
 Line: 1, Token: identifier, Lexeme: x
 Line: 1, Token: delimiter, Lexeme: ;
+Line: 1, Token: delimiter, Lexeme: ;
 Line: 2, Token: keyword, Lexeme: import
 Line: 2, Token: identifier, Lexeme: y
 Line: 2, Token: delimiter, Lexeme: ;
+!!! Error in line 2 while parsing @
 Line: 3, Token: keyword, Lexeme: int
 Line: 3, Token: identifier, Lexeme: main
 Line: 3, Token: delimiter, Lexeme: (

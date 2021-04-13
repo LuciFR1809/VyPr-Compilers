@@ -1,9 +1,11 @@
 1 <!> keyword <!> import
 1 <!> identifier <!> x
 1 <!> delimiter <!> ;
+1 <!> delimiter <!> ;
 2 <!> keyword <!> import
 2 <!> identifier <!> y
 2 <!> delimiter <!> ;
+2 <!> Error <!> @
 3 <!> keyword <!> int
 3 <!> identifier <!> main
 3 <!> delimiter <!> (
