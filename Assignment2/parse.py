@@ -43,6 +43,8 @@ def parse(fname=None):
 
     with open("Rules.json", 'r', encoding='utf8') as f3:
         reduce_table = json.load(f3)
+    
+    parse_outf = open(f'{filename.split("_")[0]}_output_parse.txt', "w", encoding='utf8')
 
     with open(filename, 'r', encoding='utf8') as f:
         lines = f.readlines()
@@ -56,14 +58,15 @@ def parse(fname=None):
         tree_stack = []
         Err_stack = []
         count = 0
+        steps = 0
         # get parse_table, reduce_table and goto_table
-        for _ in lines:
+        while True:
             lin_num, token, lexeme = lines[count].split('<!>')
             token = token.strip()
             lexeme = lexeme.strip('\n')
             lexeme = lexeme.strip()
-            print(f'{count} : {stack}')
-
+            print(f'{steps} : {stack}', file=parse_outf)
+            steps+=1
             # bring token in required format as in parse table
 
             if token == 'integer_literal':
@@ -79,6 +82,8 @@ def parse(fname=None):
             if token == 'delimiter':
                 token = lexeme
             if token == 'keyword':
+                token = lexeme
+            if token == 'stop':
                 token = lexeme
             if token == 'Error':
                 print(
@@ -134,6 +139,13 @@ def parse(fname=None):
                     tree_stack.append(parent)
                     stack.append(new_num)
 
+            elif next_op == 'acc':
+                stack.append(next_op)
+                print(f'{steps} : {stack}', file=parse_outf)
+                parse_outf.close()
+                print("SUCCESS")
+                break
+
             else:
                 print(
                     f'\033[0;31mSyntax Error:: Line number {lin_num}, Wrong Syntactic Input {lexeme}, Please check again\033[0m')
@@ -143,6 +155,8 @@ def parse(fname=None):
                 while prev_lin_num == lin_num:
                     count += 1
                     lin_num, token, lexeme = lines[count].split('<!>')
+            
+            
 
 
 if __name__ == '__main__':

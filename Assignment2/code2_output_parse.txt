@@ -1,46 +1,18 @@
-1 <!> keyword <!> import
-1 <!> identifier <!> x
-1 <!> delimiter <!> ;
-2 <!> keyword <!> import
-2 <!> identifier <!> y
-2 <!> delimiter <!> ;
-3 <!> keyword <!> import
-3 <!> identifier <!> z
-5 <!> identifier <!> init
-5 <!> identifier <!> main
-5 <!> delimiter <!> (
-5 <!> delimiter <!> )
-5 <!> delimiter <!> {
-6 <!> keyword <!> import
-6 <!> identifier <!> t
-7 <!> keyword <!> int
-7 <!> identifier <!> mul
-7 <!> operator <!> =
-7 <!> integer_literal <!> 1
-7 <!> delimiter <!> ;
-8 <!> keyword <!> for
-8 <!> delimiter <!> (
-8 <!> keyword <!> int
-8 <!> identifier <!> i
-8 <!> operator <!> =
-8 <!> integer_literal <!> 1
-8 <!> delimiter <!> ;
-8 <!> identifier <!> i
-8 <!> operator <!> <
-8 <!> integer_literal <!> 9
-8 <!> delimiter <!> ;
-8 <!> identifier <!> i
-8 <!> operator <!> +
-8 <!> delimiter <!> )
-8 <!> delimiter <!> {
-9 <!> identifier <!> mul
-9 <!> operator <!> =
-9 <!> identifier <!> mul
-9 <!> operator <!> *
-9 <!> identifier <!> i
-9 <!> delimiter <!> ;
-10 <!> delimiter <!> }
-11 <!> keyword <!> return
-11 <!> identifier <!> mul
-11 <!> delimiter <!> ;
-12 <!> delimiter <!> }
+0 : ['0']
+1 : ['0', 'import', '3']
+2 : ['0', 'import', '3', 'ID', '14']
+3 : ['0', 'import', '3', 'ID', '14', ';', '17']
+4 : ['0', 'IMPORT_STMT', '2']
+5 : ['0', 'IMPORT_STMT', '2', 'import', '3']
+6 : ['0', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']
+7 : ['0', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14', ';', '17']
+8 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2']
+9 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3']
+10 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']
+11 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']
+12 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']
+13 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']
+14 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']
+15 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']
+16 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']
+17 : ['0', 'IMPORT_STMT', '2', 'IMPORT_STMT', '2', 'import', '3', 'ID', '14']

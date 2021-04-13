@@ -1,12 +1,41 @@
-1 <!> keyword <!> import
-1 <!> identifier <!> modulename
-1 <!> delimiter <!> ;
-2 <!> keyword <!> int
-2 <!> identifier <!> main
-2 <!> delimiter <!> (
-2 <!> delimiter <!> )
-3 <!> delimiter <!> {
-4 <!> keyword <!> return
-4 <!> integer literal <!> 0
-4 <!> delimiter <!> ;
-5 <!> delimiter <!> }
+0 : ['0']
+1 : ['0', 'import', '3']
+2 : ['0', 'import', '3', 'ID', '14']
+3 : ['0', 'import', '3', 'ID', '14', ';', '17']
+4 : ['0', 'IMPORT_STMT', '2']
+5 : ['0', 'IMPORT_STMT', '2', 'IMPORT_LIST', '13']
+6 : ['0', 'IMPORT_LIST', '1']
+7 : ['0', 'IMPORT_LIST', '1', 'int', '9']
+8 : ['0', 'IMPORT_LIST', '1', 'DATA_TYPE', '7']
+9 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6']
+10 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16']
+11 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18']
+12 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19']
+13 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26']
+14 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33']
+15 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54']
+16 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'INT_LIT', '72']
+17 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'CONST', '69']
+18 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_6', '66']
+19 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_5', '65']
+20 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_5', '65', "OUT_STMT_4'", '119']
+21 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_4', '64']
+22 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_4', '64', "OUT_STMT_3'", '115']
+23 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_3', '63']
+24 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_3', '63', "OUT_STMT_2'", '112']
+25 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_2', '62']
+26 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_2', '62', "OUT_STMT_1'", '105']
+27 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_1', '53']
+28 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT_1', '53', "OUT_STMT'", '95']
+29 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'return', '54', 'OUT_STMT', '98']
+30 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'RET_STMT', '43']
+31 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'SINGLE_STMT', '37']
+32 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'SINGLE_STMT', '37', ';', '79']
+33 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'STMT', '36']
+34 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'STMT', '36', 'STMT_LIST', '78']
+35 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'STMT_LIST', '35']
+36 : ['0', 'IMPORT_LIST', '1', 'RET_TYPE', '6', 'ID', '16', '(', '18', 'PARAMS', '19', ')', '26', '{', '33', 'STMT_LIST', '35', '}', '77']
+37 : ['0', 'IMPORT_LIST', '1', 'FUNC', '5']
+38 : ['0', 'IMPORT_LIST', '1', 'FUNC', '5', 'FUNC_LIST', '15']
+39 : ['0', 'IMPORT_LIST', '1', 'FUNC_LIST', '4']
+40 : ['0', 'IMPORT_LIST', '1', 'FUNC_LIST', '4', 'acc']
