@@ -2,7 +2,7 @@ import x;
 import y;
 import z
 
-init main(){
+int main(){
     import t
     int mul = 1;
     for (int i = 1; i < 9; i++){

@@ -152,7 +152,8 @@ def parse(fname=None):
                 continue
 
             # look up parse table for next character
-            next_op = parse_lookup(parse_table, token, stack[-1])
+            number = stack[-1]
+            next_op = parse_lookup(parse_table, token, number)
 
             # shift action
             if next_op[0] == 's':
@@ -187,14 +188,20 @@ def parse(fname=None):
                             flag = False
 
                 # now look up goto table and find the next rule
+                num = stack[-1]
                 new_num = parse_lookup(
-                    goto_table, non_terminal, stack[-1])
+                    goto_table, non_terminal, num)
 
                 if new_num == 'Error':
+
                     stack_safe_state(stack, tokens, count)
                     count = next_safe_state(lines, count, False)
+
+                    expected = []
+                    for keys in goto_table[num].keys():
+                        expected.append(keys)
                     print(
-                        f'\033[0;31mSyntax Error:: Line number {lin_num}, Wrong Syntactic Input {lexeme}, Please check again\033[0m')
+                        f'\033[0;31mSyntax Error:: Line number {lin_num}, Found {lexeme} Expected {expected}, Please check again\033[0m')
                     Err_stack.append(
                         f'Syntax Error:: Line number {lin_num}, Wrong Syntactic Input {lexeme}, Please check again')
                 else:
@@ -212,10 +219,13 @@ def parse(fname=None):
             else:
                 stack_safe_state(stack, tokens, count)
                 count = next_safe_state(lines, count, False)
+                expected = []
+                for keys in parse_table[number].keys():
+                    expected.append(keys)
                 print(
-                    f'\033[0;31mSyntax Error:: Line number {lin_num}, Wrong Syntactic Input {lexeme}, Please check again\033[0m')
+                    f'\033[0;31mSyntax Error Line number {lin_num} ::::  Found {lexeme} Expected {expected} \033[0m')
                 Err_stack.append(
-                    f'Syntax Error:: Line number {lin_num}, Wrong Syntactic Input {lexeme}, Please check again')
+                    f'Syntax Error Line number {lin_num} ::::  Found {lexeme} Expected {expected}')
                 # prev_lin_num = lin_num
                 # while prev_lin_num == lin_num:
                 #     count += 1
