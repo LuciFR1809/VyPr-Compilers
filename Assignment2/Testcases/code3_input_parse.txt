@@ -18,6 +18,8 @@
 5 <!> delimiter <!> {
 6 <!> keyword <!> int
 6 <!> identifier <!> a
+6 <!> delimiter <!> ,
+6 <!> identifier <!> d
 6 <!> operator <!> =
 6 <!> integer_literal <!> -13
 6 <!> delimiter <!> ;
@@ -32,6 +34,6 @@
 8 <!> integer_literal <!> 20
 8 <!> delimiter <!> ;
 10 <!> keyword <!> return
-10 <!> identifier <!> a
+10 <!> integer_literal <!> 0
 10 <!> delimiter <!> ;
 11 <!> delimiter <!> }
