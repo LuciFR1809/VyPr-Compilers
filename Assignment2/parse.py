@@ -6,7 +6,7 @@
 import sys
 import json
 
-safe_symbols = [';', ',', '}']
+safe_symbols = [';', '}']
 
 class Tree(object):
     def __init__(self, data):

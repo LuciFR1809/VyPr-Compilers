@@ -18,6 +18,8 @@ Line: 5, Token: delimiter, Lexeme: )
 Line: 5, Token: delimiter, Lexeme: {
 Line: 6, Token: keyword, Lexeme: int
 Line: 6, Token: identifier, Lexeme: a
+Line: 6, Token: delimiter, Lexeme: ,
+Line: 6, Token: identifier, Lexeme: d
 Line: 6, Token: operator, Lexeme: =
 Line: 6, Token: integer_literal, Lexeme: -13
 Line: 6, Token: delimiter, Lexeme: ;
@@ -32,6 +34,6 @@ Line: 8, Token: operator, Lexeme: =
 Line: 8, Token: integer_literal, Lexeme: 20
 Line: 8, Token: delimiter, Lexeme: ;
 Line: 10, Token: keyword, Lexeme: return
-Line: 10, Token: identifier, Lexeme: a
+Line: 10, Token: integer_literal, Lexeme: 0
 Line: 10, Token: delimiter, Lexeme: ;
 Line: 11, Token: delimiter, Lexeme: }

@@ -3,9 +3,9 @@ import y;
 import z
 
 int main(int a,int b){
-    int a = -13;
+    int a, d = -13;
     int b = 10;
     int c = 20;
 
-    return a;
+    return 0;
 }
