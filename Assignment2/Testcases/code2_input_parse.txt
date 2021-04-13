@@ -6,6 +6,7 @@
 2 <!> delimiter <!> ;
 3 <!> keyword <!> import
 3 <!> identifier <!> z
+3 <!> delimiter <!> ;
 5 <!> keyword <!> int
 5 <!> identifier <!> main
 5 <!> delimiter <!> (
@@ -13,6 +14,7 @@
 5 <!> delimiter <!> {
 6 <!> keyword <!> import
 6 <!> identifier <!> t
+6 <!> delimiter <!> ;
 7 <!> keyword <!> int
 7 <!> identifier <!> mul
 7 <!> operator <!> =

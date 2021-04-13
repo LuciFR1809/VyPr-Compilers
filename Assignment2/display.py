@@ -25,9 +25,9 @@ def display():
 	fname = input('\033[0;32mEnter filename (default: code.vypr):\033[0m') or ' '
 
 	if fname == ' ':
-		file = open("code.vypr", 'r', encoding='utf8')
+		file = open("Testcases/code.vypr", 'r', encoding='utf8')
 	else:
-		file = open(f'{fname}', 'r', encoding='utf8')
+		file = open(f'Testcases/{fname}', 'r', encoding='utf8')
 
 	print("\n\033[92m"+file.read()+"\033[0m\n")
 	file.close()

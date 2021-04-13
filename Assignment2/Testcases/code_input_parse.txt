@@ -1,0 +1,12 @@
+1 <!> keyword <!> import
+1 <!> identifier <!> modulename
+1 <!> delimiter <!> ;
+2 <!> keyword <!> int
+2 <!> identifier <!> main
+2 <!> delimiter <!> (
+2 <!> delimiter <!> )
+3 <!> delimiter <!> {
+4 <!> keyword <!> return
+4 <!> integer_literal <!> 0
+4 <!> delimiter <!> ;
+5 <!> delimiter <!> }

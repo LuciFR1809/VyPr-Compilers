@@ -6,7 +6,10 @@
 import sys
 import json
 
-safe_symbols = [';', ',', '}']
+from lexer import lexer
+
+safe_symbols = [';', '}']
+
 
 class Tree(object):
     def __init__(self, data):
@@ -19,36 +22,37 @@ class Tree(object):
         if self.depth <= child.depth:
             self.depth = child.depth+1
 
+
 def parse_format(lines):
 
     tokens = []
 
     for line in lines:
-            lin_num, token, lexeme = line.split('<!>')
-            token = token.strip()
-            lexeme = lexeme.strip('\n')
-            lexeme = lexeme.strip()
-            # bring token in required format as in parse table
+        lin_num, token, lexeme = line.split('<!>')
+        token = token.strip()
+        lexeme = lexeme.strip('\n')
+        lexeme = lexeme.strip()
+        # bring token in required format as in parse table
 
-            if token == 'integer_literal':
-                token = 'INT_LIT'
-            if token == 'floating_literal':
-                token = 'FLT_LIT'
-            if token == 'identifier':
-                token = 'ID'
-            if token == 'string_literal':
-                token = 'STR_LIT'
-            if token == 'operator':
-                token = lexeme
-            if token == 'delimiter':
-                token = lexeme
-            if token == 'keyword':
-                token = lexeme
-            if token == 'stop':
-                token = lexeme
-            if token == 'Error':
-                pass
-            tokens.append([lin_num, token, lexeme])
+        if token == 'integer_literal':
+            token = 'INT_LIT'
+        if token == 'floating_literal':
+            token = 'FLT_LIT'
+        if token == 'identifier':
+            token = 'ID'
+        if token == 'string_literal':
+            token = 'STR_LIT'
+        if token == 'operator':
+            token = lexeme
+        if token == 'delimiter':
+            token = lexeme
+        if token == 'keyword':
+            token = lexeme
+        if token == 'stop':
+            token = lexeme
+        if token == 'Error':
+            pass
+        tokens.append([lin_num, token, lexeme])
     return tokens
 
 
@@ -61,15 +65,17 @@ def reduce_lookup(reduce_table, number):
     lines = rule.split('->')
     return lines[0].strip(), lines[1].strip()
 
+
 def stack_safe_state(stack, tokens, count):
     while True:
         token = tokens[-1]
         if token in safe_symbols or token != stack[-2]:
-            return 
+            return
         else:
             tokens.pop()
             stack.pop()
             stack.pop()
+
 
 def next_safe_state(lines, count, flag):
     while True:
@@ -78,38 +84,43 @@ def next_safe_state(lines, count, flag):
             if token == '}':
                 return count+1
             elif token == '{':
-                count = next_safe_state(lines,count+1, True)
+                count = next_safe_state(lines, count+1, True)
             else:
-                count+=1
+                count += 1
         else:
             if token in safe_symbols:
                 return count+1
             elif token == '{':
-                return next_safe_state(lines,count+1, True)
+                return next_safe_state(lines, count+1, True)
             elif count == len(lines)-1:
                 return count
             else:
-                count+=1
+                count += 1
 
 
 def parse(fname=None):
     if fname is None:
-        filename = sys.argv[1]
+        filename = f'Testcases/{sys.argv[1]}'
     else:
         filename = fname
 
-    with open("Action Table.json", 'r', encoding='utf8') as f1:
+    with open("Tables/Action Table.json", 'r', encoding='utf8') as f1:
         parse_table = json.load(f1)
 
-    with open("Goto Table.json", 'r', encoding='utf8') as f2:
+    with open("Tables/Goto Table.json", 'r', encoding='utf8') as f2:
         goto_table = json.load(f2)
 
-    with open("Rules.json", 'r', encoding='utf8') as f3:
+    with open("Tables/Rules.json", 'r', encoding='utf8') as f3:
         reduce_table = json.load(f3)
-    
-    parse_outf = open(f'{filename.split("_")[0]}_output_parse.txt', "w", encoding='utf8')
 
-    with open(filename, 'r', encoding='utf8') as f:
+    parse_outf = open(
+        f'{filename.split(".")[0]}_output_parse.txt', "w", encoding='utf8')
+
+    lexer(filename)
+    print()
+    inputfname = f'{filename.split(".")[0]}_input_parse.txt'
+
+    with open(inputfname, 'r', encoding='utf8') as f:
 
         # code to just bring input into required format - lines will contain final (line, token, lexeme) tuple
         lines = f.readlines()
@@ -120,7 +131,6 @@ def parse(fname=None):
         else:
             lines.append('0 <!> stop <!> $')
         lines = parse_format(lines)
-
 
         # stack - has stack contents
         # tokens - have all tokens - terminals in order of insertion into stack
@@ -139,7 +149,7 @@ def parse(fname=None):
 
             lin_num, token, lexeme = lines[count]
             print(f'{steps} : {stack}', file=parse_outf)
-            steps+=1
+            steps += 1
 
             # handle lexical error
             if token == 'Error':
@@ -230,8 +240,6 @@ def parse(fname=None):
                 # while prev_lin_num == lin_num:
                 #     count += 1
                 #     lin_num, token, lexeme = lines[count]
-            
-            
 
 
 if __name__ == '__main__':

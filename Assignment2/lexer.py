@@ -194,7 +194,7 @@ def lexeme(string):
 # Driver Code
 def lexer(fname=None):
     if fname is None:
-        filename = sys.argv[1]
+        filename = f'Testcases/{sys.argv[1]}'
     else:
         filename = fname
     outfile = open(
