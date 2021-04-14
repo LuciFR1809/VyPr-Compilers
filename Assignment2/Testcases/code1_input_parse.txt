@@ -14,6 +14,16 @@
 5 <!> delimiter <!> {
 6 <!> keyword <!> int
 6 <!> identifier <!> a
+6 <!> operator <!> =
+6 <!> integer_literal <!> 2
+6 <!> delimiter <!> ,
+6 <!> identifier <!> b
+6 <!> delimiter <!> ,
+6 <!> identifier <!> c
+6 <!> delimiter <!> ,
+6 <!> identifier <!> d
+6 <!> operator <!> =
+6 <!> integer_literal <!> -1
 6 <!> delimiter <!> ;
 7 <!> identifier <!> a
 7 <!> operator <!> *=

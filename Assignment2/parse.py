@@ -162,9 +162,9 @@ def parse(fname=None):
                 if count == -1:
                     break
                 print(
-                    f'\033[0;31mLexical Error:: Line number {lin_num}, UnIdentified character {lexeme} found\033[0m')
+                    f'\033[0;31mLexical Error:: Line number {lin_num}, Unidentified character {lexeme} found\033[0m')
                 Err_stack.append(
-                    f'Lexical Error:: Line number {lin_num}, UnIdentified character {lexeme} found')
+                    f'Lexical Error:: Line number {lin_num}, Unidentified character {lexeme} found')
                 continue
 
             # look up parse table for next character
