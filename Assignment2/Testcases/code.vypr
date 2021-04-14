@@ -1,5 +1,12 @@
 import modulename;
 int main()
 {
+	int y = 0;
+	y = fun(y);
+	switch (y) {
+		case 1: print("hello world");
+		case 2: print("hello boys and girls");
+		default : print("hello nation");
+	}
 	return 0;
 }

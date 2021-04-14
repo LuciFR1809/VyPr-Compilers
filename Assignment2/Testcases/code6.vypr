@@ -1,0 +1,8 @@
+import module;
+
+int main(int y){
+    string yt = "What is wrong with you?";
+    print(yt);
+    int y = 10;
+    print(fun(yt));
+}

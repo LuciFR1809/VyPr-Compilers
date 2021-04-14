@@ -20,11 +20,11 @@
 5 <!> identifier <!> q
 5 <!> operator <!> =
 5 <!> integer_literal <!> 20
+5 <!> delimiter <!> ;
 6 <!> keyword <!> int
 6 <!> identifier <!> y
 6 <!> operator <!> =
 6 <!> identifier <!> w
-6 <!> operator <!> +
 6 <!> identifier <!> q
 6 <!> delimiter <!> ;
 7 <!> delimiter <!> }

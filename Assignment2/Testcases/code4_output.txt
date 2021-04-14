@@ -20,11 +20,11 @@ Line: 5, Token: keyword, Lexeme: int
 Line: 5, Token: identifier, Lexeme: q
 Line: 5, Token: operator, Lexeme: =
 Line: 5, Token: integer_literal, Lexeme: 20
+Line: 5, Token: delimiter, Lexeme: ;
 Line: 6, Token: keyword, Lexeme: int
 Line: 6, Token: identifier, Lexeme: y
 Line: 6, Token: operator, Lexeme: =
 Line: 6, Token: identifier, Lexeme: w
-Line: 6, Token: operator, Lexeme: +
 Line: 6, Token: identifier, Lexeme: q
 Line: 6, Token: delimiter, Lexeme: ;
 Line: 7, Token: delimiter, Lexeme: }

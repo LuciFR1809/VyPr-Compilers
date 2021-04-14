@@ -274,4 +274,4 @@
 273 : ['0', 'IMPORT_LIST', '1', 'FUNC', '5']
 274 : ['0', 'IMPORT_LIST', '1', 'FUNC', '5', 'FUNC_LIST', '15']
 275 : ['0', 'IMPORT_LIST', '1', 'FUNC_LIST', '4']
-276 : ['0', 'IMPORT_LIST', '1', 'FUNC_LIST', '4', 'acc']
+276 : ['0', 'acc']

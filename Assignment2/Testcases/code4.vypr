@@ -2,6 +2,6 @@ import x;;
 import y;@
 int main(){
     int  w = 10;
-    int q= 20
-    int y = w+q;
+    int q= 20;
+    int y = w q;
 }

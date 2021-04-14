@@ -41,7 +41,7 @@ keywords = ['int', 'float', 'do', 'void', 'boolean', 'string', 'for', 'if', 'els
 operators = ['+=', '-=', '*=', '/=', '%=', '==', '<=', '>=', '!=', '<<',
                          '>>', '&&', '||', '+', '-', '*', '%', '/', '=', '!', '<', '>']
 
-delimiters = [';', ',', '(', ')', '{', '}', '\n', '\r', '\t', '\\']
+delimiters = [';', ',', '(', ')', '{', '}',':' ,'\n', '\r', '\t', '\\']
 
 string_term = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
                'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -205,20 +205,21 @@ def lexer(fname=None):
         filestr = f.read()
         for lex in lexeme(filestr):
             if lex['token'] == 'invalid':
-                print(
-                    f"!!! Error in line {lex['line']} while parsing {lex['lexeme']}")
+                # print(
+                #     f"!!! Error in line {lex['line']} while parsing {lex['lexeme']}")
                 print(
                     f"!!! Error in line {lex['line']} while parsing {lex['lexeme']}", file=outfile)
                 print(
                     f"{lex['line']} <!> Error <!> {lex['lexeme']}", file=parsefile)
 
             else:
-                print(
-                    f"Line: {lex['line']}, Token: {lex['token']}, Lexeme: {lex['lexeme']}")
+                # print(
+                #     f"Line: {lex['line']}, Token: {lex['token']}, Lexeme: {lex['lexeme']}")
                 print(
                     f"Line: {lex['line']}, Token: {lex['token']}, Lexeme: {lex['lexeme']}", file=outfile)
                 print(
                     f"{lex['line']} <!> {lex['token']} <!> {lex['lexeme']}", file=parsefile)
+        #print(f'\033[35mLexical Analysis Completed !!!\033[0m')
 
 
 if __name__ == '__main__':

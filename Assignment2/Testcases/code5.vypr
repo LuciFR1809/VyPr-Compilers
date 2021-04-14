@@ -1,0 +1,10 @@
+import solid;
+
+float main(string yt){
+    print(yt);
+    do{
+        yt += "ww";
+        if(len(yt) == 12)
+            break;
+    }while(true);
+}
