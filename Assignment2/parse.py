@@ -1,21 +1,28 @@
-import sys
 import json
 import platform
 import subprocess
+import sys
+
 from lexer import lexer
 
 # list of safe symbols for error recovery
 safe_symbols = [';', '}']
 
 # update safe stack to newest safe state
+
+
 def update_safe(stack):
     return stack.copy()
 
 # bring original stack to safe state
+
+
 def stack_safe_state(safe_stack):
     return safe_stack.copy()
 
 # bring token in required format as in parse table
+
+
 def parse_format(lines):
     tokens = []
 
@@ -47,19 +54,25 @@ def parse_format(lines):
     return tokens
 
 # look up parse table or goto table
+
+
 def parse_lookup(parse_table, token, number):
     return parse_table[number].get(token, 'Error')
 
 # look up reduce table
+
+
 def reduce_lookup(reduce_table, number):
     rule = reduce_table[number]
     lines = rule.split('->')
     return lines[0].strip(), lines[1].strip()
 
 # parsing process
+
+
 def parse(fname=None):
 
-    #get input file
+    # get input file
     if fname is None:
         filename = f'Testcases/{sys.argv[1]}'
     else:
@@ -74,12 +87,13 @@ def parse(fname=None):
         reduce_table = json.load(f3)
 
     # input file lexical analysis , open input and output parser files
-    parse_outf = open( f'{filename.split(".")[0]}_output_parse.txt', "w", encoding='utf8')
+    parse_outf = open(
+        f'{filename.split(".")[0]}_output_parse.txt', "w", encoding='utf8')
     lexer(filename)
     inputfname = f'{filename.split(".")[0]}_input_parse.txt'
 
     # code to just bring input into required format - lines will contain final (line, token, lexeme) tuple
-    with open(inputfname, 'r', encoding='utf8') as f:  
+    with open(inputfname, 'r', encoding='utf8') as f:
         lines = f.readlines()
 
         if lines != []:
@@ -91,7 +105,7 @@ def parse(fname=None):
                 lines.append('0 <!> stop <!> $')
 
         lines = parse_format(lines)
-    
+
         # stack - has stack contents
         # safe_stack - maintains the last safe state and all symbols inside it
         # tokens - have all tokens - terminals in order of insertion into stack
@@ -136,13 +150,14 @@ def parse(fname=None):
                 tokens.append(token)
                 stack.append(next_op[1:])
                 if update_safe_stack:
-                        safe_stack = update_safe(stack)
+                    safe_stack = update_safe(stack)
                 count += 1
                 continue
 
             # reduce action
             elif next_op[0] == 'r':
-                non_terminal, condense = reduce_lookup(reduce_table, next_op[1:])
+                non_terminal, condense = reduce_lookup(
+                    reduce_table, next_op[1:])
                 condense = condense.split()
                 condense.reverse()
 
@@ -162,7 +177,7 @@ def parse(fname=None):
 
                 # now look up goto table and find the next rule
                 num = stack[-1]
-                new_num = parse_lookup( goto_table, non_terminal, num)
+                new_num = parse_lookup(goto_table, non_terminal, num)
 
                 if new_num == 'Error':
                     stack = stack_safe_state(safe_stack)
@@ -175,7 +190,7 @@ def parse(fname=None):
                         expected.append(keys)
                     print(
                         f'\033[0;31mSyntax Error:: Line number {lin_num}, Found {lexeme} Expected one among {expected}, Please check again\033[0m')
-                
+
                 else:
                     stack.append(non_terminal)
                     stack.append(new_num)
@@ -187,11 +202,14 @@ def parse(fname=None):
                 print(f'{steps} : {stack}', file=parse_outf)
                 parse_outf.close()
                 print("\033[32mPARSING SUCCESS - accept state reached\033[0m")
-                print(f"{filename.split('.')[0]}_output_parse.txt".replace('/', '\\' ))
+                print(
+                    f"{filename.split('.')[0]}_output_parse.txt".replace('/', '\\'))
                 if platform.system() == "Windows":
-                    subprocess.run(["notepad", f"{filename.split('.')[0]}_output_parse.txt".replace('/', '\\' )])
+                    subprocess.run(
+                        ["notepad", f"{filename.split('.')[0]}_output_parse.txt".replace('/', '\\')])
                 elif platform.system() == "Linux":
-                    subprocess.run(["gedit",f"{filename.split('.')[0]}_output_parse.txt"])     
+                    subprocess.run(
+                        ["gedit", f"{filename.split('.')[0]}_output_parse.txt"])
                 break
 
             else:
@@ -204,14 +222,10 @@ def parse(fname=None):
                     f'\033[0;31mSyntax Error Line number {lin_num} ::::  Found {lexeme} Expected one among {expected} \033[0m')
                 stack = stack_safe_state(safe_stack)
                 count += 1
-                if token  == '$':
+                if token == '$':
                     print(f'\033[93mPARSING FAIL ::: FOUND EOF\033[0m')
                     break
-                
-
 
 
 if __name__ == '__main__':
     parse()
-
-
