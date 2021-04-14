@@ -85,6 +85,9 @@ def next_safe_state(lines, count, flag):
                 return count+1
             elif token == '{':
                 count = next_safe_state(lines, count+1, True)
+            elif token == '$':
+                print(f'\033[0;31mPARSING FAIL ::: FOUND EOF\033[0m')
+                return -1
             else:
                 count += 1
         else:
@@ -92,8 +95,9 @@ def next_safe_state(lines, count, flag):
                 return count+1
             elif token == '{':
                 return next_safe_state(lines, count+1, True)
-            elif count == len(lines)-1:
-                return count
+            elif token == '$':
+                print(f'\033[0;31mPARSING FAIL ::: FOUND EOF\033[0m')
+                return -1
             else:
                 count += 1
 
@@ -155,6 +159,8 @@ def parse(fname=None):
             if token == 'Error':
                 stack_safe_state(stack, tokens, count)
                 count = next_safe_state(lines, count, False)
+                if count == -1:
+                    break
                 print(
                     f'\033[0;31mLexical Error:: Line number {lin_num}, UnIdentified character {lexeme} found\033[0m')
                 Err_stack.append(
@@ -206,7 +212,8 @@ def parse(fname=None):
 
                     stack_safe_state(stack, tokens, count)
                     count = next_safe_state(lines, count, False)
-
+                    if count == -1:
+                        break
                     expected = []
                     for keys in goto_table[num].keys():
                         expected.append(keys)
@@ -223,12 +230,14 @@ def parse(fname=None):
                 stack.append(next_op)
                 print(f'{steps} : {stack}', file=parse_outf)
                 parse_outf.close()
-                print("SUCCESS")
+                print("\033[35mPARSING SUCCESS - accept state reached\033[0m")
                 break
 
             else:
                 stack_safe_state(stack, tokens, count)
                 count = next_safe_state(lines, count, False)
+                if count == -1:
+                    break
                 expected = []
                 for keys in parse_table[number].keys():
                     expected.append(keys)
