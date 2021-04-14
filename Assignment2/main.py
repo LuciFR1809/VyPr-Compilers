@@ -15,6 +15,7 @@
 # CROSSED = \033[9m
 # END = \033[0m
 import os
+import platform
 import time
 
 from create import create
@@ -25,8 +26,10 @@ from parse import parse
 
 
 def cls():
-    return os.system('cls')
-
+    if platform.system() == 'Windows':
+        return os.system('cls')
+    elif platform.system() == 'Linux':
+        return os.system('clear')
 
 cls()
 print('''

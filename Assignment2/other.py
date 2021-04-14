@@ -16,7 +16,7 @@
 # END = \033[0m
 def other():
     print('''
-	A Lexical Analyser Program for toy Lang vYpr
+	A Parser Program for toy lang vYpr
 			   \033[1mGROUP 21\033[0m\033[0;36m
 		+----------------+---------------+
 		|      NAME      |    ID NO.     |
@@ -37,22 +37,15 @@ def other():
 	[\u2713] Removes Comments
 	[\u2713] CLI created for easy operation\033[0;0m
  
-   	Fuctionalities on check list:\033[0;31m
-	[ ] Syntax analysis
-	[ ] Expand language constructs
-	[ ] Compile and execute vYpr programs
- 
-\033[0;0m			\033[0;34m Part 2: \033[0m
+   	\033[0;34m		Part 2: \033[0m
 	Functionalities enabled\033[0;32m
-	[\u2713] Created DFA
-	[\u2713] Created lexeme() function which can be called repeatedly
-	[\u2713] Removes Whitespace
-	[\u2713] Removes Comments
-	[\u2713] CLI created for easy operation\033[0;0m
+	[\u2713] Created CFG of language
+	[\u2713] Created LALR(1) parse table for vYpr
+	[\u2713] Expand language constructs
+	[\u2713] Syntax analysis
+	[\u2713] Error handling while parsing\033[0;0m
  
    	Fuctionalities on check list:\033[0;31m
-	[ ] Syntax analysis
-	[ ] Expand language constructs
 	[ ] Compile and execute vYpr programs
 \033[0;0m''')
 

@@ -1,3 +1,12 @@
+# Compiler Construction CSF363 Assignment
+# Phase 2 - Syntax Analysis
+# Made by --
+# Kumar Pranjal - 2018A7PS0163H
+# Ashna Swaika - 2018A7PS0027H
+# Abhishek Bapna - 2018A7PS0184H
+# Ashish Verma - 2018A7PS0009H
+
+# code starts here
 import json
 import platform
 import subprocess
@@ -8,21 +17,18 @@ from lexer import lexer
 # list of safe symbols for error recovery
 safe_symbols = [';', '}']
 
+
 # update safe stack to newest safe state
-
-
 def update_safe(stack):
     return stack.copy()
 
+
 # bring original stack to safe state
-
-
 def stack_safe_state(safe_stack):
     return safe_stack.copy()
 
+
 # bring token in required format as in parse table
-
-
 def parse_format(lines):
     tokens = []
 
@@ -53,23 +59,20 @@ def parse_format(lines):
 
     return tokens
 
+
 # look up parse table or goto table
-
-
 def parse_lookup(parse_table, token, number):
     return parse_table[number].get(token, 'Error')
 
+
 # look up reduce table
-
-
 def reduce_lookup(reduce_table, number):
     rule = reduce_table[number]
     lines = rule.split('->')
     return lines[0].strip(), lines[1].strip()
 
+
 # parsing process
-
-
 def parse(fname=None):
 
     # get input file
@@ -209,7 +212,7 @@ def parse(fname=None):
                         ["notepad", f"{filename.split('.')[0]}_output_parse.txt".replace('/', '\\')])
                 elif platform.system() == "Linux":
                     subprocess.run(
-                        ["gedit", f"{filename.split('.')[0]}_output_parse.txt"])
+                        ["subl", f"{filename.split('.')[0]}_output_parse.txt"])
                 break
 
             else:

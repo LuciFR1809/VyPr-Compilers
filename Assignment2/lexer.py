@@ -1,34 +1,10 @@
 # Compiler Construction CSF363 Assignment
-# Phase 1 - Lexical Analysis
+# Phase 2 - Syntax Analysis
 # Made by --
 # Kumar Pranjal - 2018A7PS0163H
 # Ashna Swaika - 2018A7PS0027H
 # Abhishek Bapna - 2018A7PS0184H
 # Ashish Verma - 2018A7PS0009H
-
-# black=\033[30m
-# red=\033[31m
-# green=\033[32m
-# orange=\033[33m
-# blue=\033[34m
-# purple=\033[35m
-# cyan=\033[36m
-# lightgrey=\033[37m
-# darkgrey=\033[90m
-# lightred=\033[91m
-# lightgreen=\033[92m
-# yellow=\033[93m
-# lightblue=\033[94m
-# pink=\033[95m
-# lightcyan=\033[96m
-# BOLD = \033[1m
-# FAINT = \033[2m
-# ITALIC = \033[3m
-# UNDERLINE = \033[4m
-# BLINK = \033[5m
-# NEGATIVE = \033[7m
-# CROSSED = \033[9m
-# END = \033[0m
 
 # Code starts here
 import sys
@@ -41,7 +17,7 @@ keywords = ['int', 'float', 'do', 'void', 'boolean', 'string', 'for', 'if', 'els
 operators = ['+=', '-=', '*=', '/=', '%=', '==', '<=', '>=', '!=', '<<',
                          '>>', '&&', '||', '+', '-', '*', '%', '/', '=', '!', '<', '>']
 
-delimiters = [';', ',', '(', ')', '{', '}',':' ,'\n', '\r', '\t', '\\']
+delimiters = [';', ',', '(', ')', '{', '}', ':', '\n', '\r', '\t', '\\']
 
 string_term = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
                'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
