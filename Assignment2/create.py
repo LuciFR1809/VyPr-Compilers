@@ -44,7 +44,7 @@ def create():
 
     if fname == ' ':
         file = open('Testcases/code.vypr', 'w', encoding='utf8')
-        file.write("import modulename\nint main()\n{\n	return 0;\n}")
+        file.write("import modulename;\nint main()\n{\n	return 0;\n}")
     else:
         fname = f'Testcases/{fname}'
         file = open(f'{fname}.vypr', "w", encoding='utf8')
