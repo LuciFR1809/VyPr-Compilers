@@ -8,7 +8,7 @@
 - [x] Syntax analysis
 - [x] CFG & LALR(1) Parse Table Creation
 - [x] Expand language constructs
-- [x] Error Panic Mode Recovery
+- [x] Panic Mode Error Recovery
 ## Checklist 
 - [ ] Semantic Analysis
 - [ ] Compile and execute vYpr programs
